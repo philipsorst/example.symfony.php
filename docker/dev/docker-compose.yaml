@@ -3,16 +3,18 @@ version: '3'
 services:
 
     web:
+        container_name: github.com_philipsorst_example.symfony.php-web-dev
         image: 'dontdrinkandroot/php:20-04-8-0-dev'
         ports:
             - "8000:80"
         depends_on:
             - postgres
         volumes:
-            - ./:/var/www/
-            - ./docker/apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
+            - ../../:/var/www/
+            - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
 
     postgres:
+        container_name: github.com_philipsorst_example.symfony.php-postgres-dev
         image: postgres:10
         ports:
             - "5432:5432"
