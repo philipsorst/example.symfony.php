@@ -13,9 +13,10 @@ services:
             - ./docker/apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
 
     postgres:
-        image: postgres:10
+        image: postgres:12
         ports:
             - "5432:5432"
         environment:
+            POSTGRES_USER: user
             POSTGRES_PASSWORD: password
-            POSTGRES_USER: database
+            POSTGRES_DB: database

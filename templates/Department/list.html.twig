@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Departments</h1>
+
+    <ul>
+        {% for department in departments %}
+            <li><a href="{{ path('app.department.detail', {'id': department.id}) }}">{{ department.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock body %}
