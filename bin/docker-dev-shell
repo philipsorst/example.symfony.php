@@ -1,2 +1,2 @@
 #!/bin/bash
-docker exec -it github.com_philipsorst_example.symfony.php-web-dev /bin/bash
+docker exec -it gh_ps_example-symfony-php-web-dev /bin/bash

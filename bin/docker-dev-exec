@@ -1,2 +1,2 @@
 #!/bin/bash
-docker exec -t github.com_philipsorst_example.symfony.php-web-dev "$@"
+docker exec -t github.gh_ps_example-symfony-php-web-dev "$@"

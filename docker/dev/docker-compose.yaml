@@ -3,7 +3,7 @@ version: '3'
 services:
 
     web:
-        container_name: github.com_philipsorst_example.symfony.php-web-dev
+        container_name: gh_ps_example-symfony-php-web-dev
         image: 'dontdrinkandroot/php:20-04-8-0-dev'
         ports:
             - "8000:80"
@@ -14,10 +14,11 @@ services:
             - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
 
     postgres:
-        container_name: github.com_philipsorst_example.symfony.php-postgres-dev
-        image: postgres:10
+        container_name: gh_ps_example-symfony-php-postgres-dev
+        image: postgres:12
         ports:
             - "5432:5432"
         environment:
+            POSTGRES_USER: user
             POSTGRES_PASSWORD: password
-            POSTGRES_USER: database
+            POSTGRES_DB: database
